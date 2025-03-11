@@ -3,6 +3,7 @@ import 'package:wordle/Wordle/data/word_list.dart';
 import 'package:flutter/material.dart';
 import 'package:wordle/Wordle/Models/letter.dart';
 import 'package:wordle/Wordle/Models/word.dart';
+import 'package:wordle/Wordle/Widgets/board.dart';
 
 enum GameStatus { playing, submitting, lost, won }
 
@@ -36,14 +37,14 @@ class WordleScreen extends StatelessWidget {
           style: TextStyle(
             fontSize: 36,
             fontWeight: FontWeight.bold,
-            letterSpacing: 4;
+            letterSpacing: 4,
           ),
         ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Board(board),
+          Board(board: _board),
         ],
       ),
     );
